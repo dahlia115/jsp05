@@ -6,7 +6,25 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body>chkUser.jsp<br>
 
+	<%
+		String user = request.getParameter("user");
+		String nickName = "test123";
+		if(user.equals("user")){%>
+			<jsp:forward page="userPage.jsp">
+				<jsp:param value="<%=nickName %>" name="nick"/>
+			</jsp:forward>
+		<%}else{ %>
+			<jsp:forward page="adminPage.jsp">
+				<jsp:param value="<%=nickName %>" name="nick"/>
+			</jsp:forward>
+		<%}%>
+<%--
+	<jsp:forward page="userPage.jsp"/>
+	<script type="text/javascript">
+		location.href="userPage.jsp"
+	</script>
+--%>
 </body>
 </html>

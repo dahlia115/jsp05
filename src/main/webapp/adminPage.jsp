@@ -11,5 +11,6 @@
 	아이디 : <%=request.getParameter("id") %><br>
 	pwd : <%=request.getParameter("pwd") %><br>
 	user : <%=request.getParameter("user") %><br>
+	nickName : <%=request.getParameter("nick") %><br>
 </body>
 </html>
